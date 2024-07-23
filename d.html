@@ -1,0 +1,35 @@
+
+<!-- //토글 버튼 만들기  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Toggle Button</title>
+</head>
+<body>
+    <h1>토글 버튼</h1>
+
+<label for="toggle" class="toggle_label">
+    <div class="switch">
+        <input type="checkbox" id="toggle" />
+        <div class="toggle_base"></div>
+        <div class="toggle_circle"></div>
+    </div>
+    <span class="title">OFF</span>
+</label>
+
+    <script>
+    const checkbox=document.getElementById('toggle');
+
+    function updateTitle(){
+        const title=document.querySelector('.title');
+        title.textContent=checkbox.checked ? 'ON' : 'OFF'
+    }   
+
+    checkbox.addEventListener('click', updateTitle);
+    </script>
+</body>
+</html>

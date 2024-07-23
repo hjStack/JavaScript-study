@@ -1,0 +1,54 @@
+
+
+/* //기본 체크박스 안보이게 처리  */
+input[type='checkbox']{
+    position:absolute;
+    width:0;
+    height:0;
+}
+
+/* // 베이스 형태를 잡아줌  */
+
+.toggle_base{
+    background-color:darkgrey;
+    width: 56px;
+    height:32px;
+    border-radius: 16px;
+}
+
+.title{
+    margin-top: 10px;
+    margin:10px
+}
+
+.toggle_label{
+    /* //가로 형태로 : display-flex */
+    display: flex;  
+    align-items: center;
+
+}
+
+.toggle_circle{
+   position: absolute;
+   top:4px;
+   left:4px;
+   width:24px;
+   height:24px;
+   border-radius: 12px;
+   background-color: gray;
+   transition: 0.5s;
+}
+
+.switch{
+    position: relative;
+}
+
+/* //check되었을떄 한정  바탕색 변경 */
+input:checked~.toggle_base{
+    background-color: #37EB00;
+}
+
+input:checked~.toggle_circle{
+    transform: translateX(100%);
+    background-color: #208800;
+}
